@@ -12,4 +12,10 @@ describe('Test suit', function () {
             .then(() => browser.element('header .header').isVisible())
             .then(result => assert(result));
     })
+
+    it('test to also pass', function () {
+        return browser.url('http://webdriver.io')
+            .then(() => browser.waitForVisible('header .header'))
+            .then(result => assert(result));
+    })
 });
